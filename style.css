@@ -17,6 +17,13 @@ BlankSlate WordPress Theme 2011-2024
 BlankSlate is distributed under the terms of the GNU GPL
 */
 
+:root {
+  --color-primary: #264653; /* Blue */
+  --color-secondary: #2a9d8f; /* Green */
+  --color-tertiary: #e9c46a; /* Red */
+  --color-background: #f4a261; /* Light gray */
+  --color-text: #bd632f; /* Dark gray for text */
+}
 html,
 body,
 div,
@@ -104,12 +111,14 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: white;
+  font-family: "Bebas Neue", serif;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  line-height: 10;
+  line-height: 3;
 }
 a {
   text-decoration-skip-ink: auto;
@@ -303,4 +312,241 @@ section {
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+}
+
+#search {
+  display: none;
+}
+
+#search.search-active {
+  display: block;
+}
+
+/* navbar shit */
+nav,
+#header {
+  background-color: var(--color-primary);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+#branding {
+  display: flex;
+  align-items: center;
+}
+
+#site-title a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  font-family: "Shrikhand";
+}
+
+#site-title a:hover {
+  color: #007bff;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.menu-item a:hover {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-close {
+  max-width: 20px;
+  align-self: end;
+  display: none;
+}
+
+/* calendar  */
+/* Container styling */
+.simcal-calendar {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 1em auto;
+  max-width: 1200px;
+}
+
+/* Table grid styles */
+.simcal-calendar-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.simcal-calendar-grid th,
+.simcal-calendar-grid td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* Header (navigation and week day labels) */
+.simcal-calendar-head th {
+  background-color: #264653; /* Primary color */
+  color: #fff;
+}
+
+.simcal-week-day {
+  font-weight: bold;
+  background-color: #2a9d8f; /* Secondary color */
+  color: #fff;
+  padding: 0.3em;
+}
+
+/* Navigation buttons */
+.simcal-nav-button {
+  background-color: #e9c46a; /* Tertiary color */
+  border: none;
+  color: #fff;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.simcal-nav-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Current month header */
+.simcal-current h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* Day label styling */
+.simcal-day-label {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 50%;
+  background-color: #264653; /* Primary color */
+  color: #fff;
+  margin-bottom: 0.3em;
+}
+
+/* General day cell styling */
+.simcal-day {
+  vertical-align: top;
+  min-height: 150px;
+}
+
+/* Styling for past days */
+.simcal-day.simcal-past {
+  background-color: #f5f5f5;
+  color: #aaa;
+}
+
+/* Styling for today's date */
+.simcal-day.simcal-today,
+.simcal-day.simcal-present {
+  border: 2px solid #2a9d8f; /* Secondary color */
+}
+
+/* Events styling */
+.simcal-events {
+  list-style: none;
+  padding: 0;
+  margin: 0.2em 0 0 0;
+  font-size: 0.8em;
+}
+
+.simcal-event {
+  background-color: #e9c46a; /* Tertiary color */
+  color: #fff;
+  padding: 0.2em 0.4em;
+  margin: 0.1em 0;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.simcal-event:hover {
+  opacity: 0.85;
+}
+
+/* Hide event dots by default */
+.simcal-events-dots {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .simcal-calendar {
+    font-size: 0.9em;
+  }
+  .simcal-calendar-grid th,
+  .simcal-calendar-grid td {
+    padding: 0.3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  .menu-close {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu.open ul {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
 }
