@@ -234,22 +234,7 @@ section {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
-.sticky {
-}
-.bypostauthor {
-}
-.wp-caption {
-}
-.wp-caption-text {
-}
-.gallery-caption {
-}
-.alignright {
-}
-.alignleft {
-}
-.aligncenter {
-}
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -341,12 +326,14 @@ nav,
   align-items: center;
 }
 
+#site-title a span,
 #site-title a {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: white;
   text-decoration: none;
-  font-family: "Shrikhand";
+  text-decoration-style: none !important;
+  font-family: "Shrikhand", serif !important;
 }
 
 #site-title a:hover {
@@ -392,6 +379,94 @@ nav,
   display: none;
 }
 
+/* wpblockcss */
+.wp-block-group,
+.wp-block-heading {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* First article */
+.landing-page-header {
+  font-family: "Bebas Neue";
+  font-size: 4rem;
+  letter-spacing: 2;
+}
+
+main article header {
+  display: none;
+}
+
+.landing-page-h2 {
+  font-family: "Bebas Neue";
+  font-size: 3.4rem;
+  line-height: 1.5;
+}
+.main-image-yea img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: rotate(6deg);
+}
+
+.unfiltered code {
+  font-family: "Shrikhand", serif;
+  font-size: 2.4rem;
+}
+.entry-content {
+  background-color: var(--color-primary);
+}
+
+/* paragarph seciotn */
+.paragraph-wrapper {
+  background-color: white;
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .simcal-calendar {
+    font-size: 0.9em;
+  }
+  .simcal-calendar-grid th,
+  .simcal-calendar-grid td {
+    padding: 0.3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  .menu-close {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu.open ul {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+}
+
 /* calendar  */
 /* Container styling */
 .simcal-calendar {
@@ -429,7 +504,6 @@ nav,
   padding: 0.3em;
 }
 
-/* Navigation buttons */
 .simcal-nav-button {
   background-color: #e9c46a; /* Tertiary color */
   border: none;
@@ -444,13 +518,11 @@ nav,
   cursor: default;
 }
 
-/* Current month header */
 .simcal-current h3 {
   margin: 0;
   font-size: 1.2em;
 }
 
-/* Day label styling */
 .simcal-day-label {
   display: flex;
   width: 1.5em;
@@ -504,7 +576,6 @@ nav,
   opacity: 0.85;
 }
 
-/* Hide event dots by default */
 .simcal-events-dots {
   display: none;
 }
@@ -512,46 +583,4 @@ nav,
 .simcal-day-number {
   padding: 0px !important;
   line-height: 1.6 !important;
-}
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .simcal-calendar {
-    font-size: 0.9em;
-  }
-  .simcal-calendar-grid th,
-  .simcal-calendar-grid td {
-    padding: 0.3em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #menu {
-    display: none;
-  }
-
-  .menu-close {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  #menu.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  #menu.open ul {
-    margin-top: 10px;
-    flex-direction: column;
-    gap: 0;
-    align-items: center;
-  }
 }
