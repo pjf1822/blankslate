@@ -388,11 +388,19 @@ nav,
   max-width: 1200px;
 }
 
+<<<<<<< HEAD
 /* 1 */
 .landing-page-header {
   font-family: "Bebas Neue";
   font-size: 5rem;
   letter-spacing: 10px;
+=======
+/* First article */
+.landing-page-header {
+  font-family: "Bebas Neue";
+  font-size: 4rem;
+  letter-spacing: 2;
+>>>>>>> 747ca678d3fc3b296fd475cfaeaa32810c212792
 }
 
 main article header {
@@ -411,17 +419,24 @@ main article header {
   transform: rotate(6deg);
 }
 
+<<<<<<< HEAD
 .unfiltered {
   font-family: "Shrikhand", serif;
   font-size: 2.4rem;
   width: "100%";
   text-align: center;
   margin-top: 30px;
+=======
+.unfiltered code {
+  font-family: "Shrikhand", serif;
+  font-size: 2.4rem;
+>>>>>>> 747ca678d3fc3b296fd475cfaeaa32810c212792
 }
 .entry-content {
   background-color: var(--color-primary);
 }
 
+<<<<<<< HEAD
 /* 2 */
 .paragraph-wrapper {
   background-color: white;
@@ -442,6 +457,13 @@ main article header {
 /* 3 */
 .blockgroup-3 {
   background-color: red;
+=======
+/* paragarph seciotn */
+.paragraph-wrapper {
+  background-color: white;
+  width: 100%;
+  margin: 0;
+>>>>>>> 747ca678d3fc3b296fd475cfaeaa32810c212792
 }
 @media (max-width: 600px) {
   .simcal-calendar {
