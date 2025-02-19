@@ -452,7 +452,7 @@ nav,
 
 /* Day label styling */
 .simcal-day-label {
-  display: inline-block;
+  display: flex;
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5em;
@@ -497,6 +497,7 @@ nav,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 25px;
 }
 
 .simcal-event:hover {
@@ -508,6 +509,10 @@ nav,
   display: none;
 }
 
+.simcal-day-number {
+  padding: 0px !important;
+  line-height: 1.6 !important;
+}
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .simcal-calendar {
